@@ -49,3 +49,8 @@ nav li {
     text-align: center;
     display: inline-block;;
 }
+
+nav li a:hover {
+    background-color: #111111;
+    color: white;
+}
