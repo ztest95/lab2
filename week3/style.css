@@ -4,6 +4,9 @@
     outline-offset: -1px; */
 }
 
+i {
+    color: dodgerblue;
+}
 h1 {
     text-align: center;
     color: dodgerblue;
