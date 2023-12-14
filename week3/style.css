@@ -17,3 +17,13 @@ h1 {
 body {
     margin: 40px;
 }
+
+#boxes {
+    height: 500px;
+    outline: 1px solid dodgerblue;
+}
+
+#boxes div {
+    padding: 50px;
+    outline: 1px solid dodgerblue;
+}
