@@ -54,3 +54,9 @@ nav li a:hover {
     background-color: #111111;
     color: white;
 }
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
