@@ -9,6 +9,10 @@ h1 {
     color: dodgerblue;
 }
 
+header p {
+    text-align: center;
+}
+
 #about {
     font-size: .8rem;
     height: 100vh;
