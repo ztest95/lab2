@@ -1,7 +1,7 @@
 * {
     font-family: 'Courier New', Courier, monospace;
-    outline: 1px solid red;
-    outline-offset: -1px;
+    /* outline: 1px solid red;
+    outline-offset: -1px; */
 }
 
 h1 {
@@ -12,4 +12,8 @@ h1 {
 #about {
     font-size: .8rem;
     height: 100vh;
+}
+
+body {
+    margin: 40px;
 }
