@@ -1,4 +1,15 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    /* outline: 1px solid red;
+    outline-offset: -1px; */
+}
+
 h1 {
     text-align: center;
     color: dodgerblue;
+}
+
+#about {
+    font-size: .8rem;
+    height: 100vh;
 }
