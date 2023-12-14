@@ -20,10 +20,10 @@ body {
 
 #boxes {
     height: 500px;
-    outline: 1px solid dodgerblue;
+    outline: 1px dodgerblue;
+    outline-style: dotted;
 }
 
 #boxes div {
     padding: 50px;
-    outline: 1px solid dodgerblue;
 }
