@@ -121,14 +121,30 @@ th:hover, td:hover {
 }
 
 main::before {
+    /* Fake Circle */
     content: "";
     position: absolute;
     z-index: -1;
     width: 90vw;
     aspect-ratio: 1;
     top: 25vh;
-    left: -275px;
+    left: -20vw;
     display: block;
     border-radius: 50%;
     border: 4rem rgba(255, 255, 255, .05) dotted;
+}
+
+#real-circle {
+    position: absolute;
+    z-index: -1;
+    width: 65vw;
+    aspect-ratio: 1;
+    right: -15vw;
+    border-radius: 50%;
+    /* background-color: rgba(255, 255, 255, .05); */
+    outline: 4rem rgba(255, 255, 255, .05) dotted;
+}
+
+.space {
+    height: 1000px;
 }
