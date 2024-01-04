@@ -3,6 +3,7 @@
     /* outline: 1px solid red;
     outline-offset: -1px; */
     color: white;
+    scroll-behavior: smooth
 }
 
 body {
