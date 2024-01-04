@@ -13,6 +13,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    margin: auto;
 }
 
 header span {
@@ -43,7 +45,7 @@ header #header-right p {
 
 nav {
     position: sticky;
-    top: 10px;
+    top: 0px;
     display: flex;
     justify-content: center;
     backdrop-filter: blur(2px);
@@ -51,6 +53,7 @@ nav {
 
 nav li {
     text-align: center;
+    width: 5rem;
     display: inline-block; 
 }
 
