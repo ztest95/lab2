@@ -3,11 +3,12 @@
     /* outline: 1px solid red;
     outline-offset: -1px; */
     color: white;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: rgba(25, 25, 25, 1);
+    overflow-x: hidden;
 }
 
 header {
@@ -81,13 +82,12 @@ nav li a:hover {
 #up-arrow p {
     text-align: center;
 }
+
 footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
-
 
 table, th, td {
     border-collapse: collapse;
@@ -126,13 +126,14 @@ main::before {
     content: "";
     position: absolute;
     z-index: -1;
-    width: 90vw;
+    width: 65vw;
     aspect-ratio: 1;
     top: 25vh;
     left: -20vw;
     display: block;
     border-radius: 50%;
-    border: 4rem rgba(255, 255, 255, .05) dotted;
+    background-color: rgba(255, 255, 255, .05);
+    outline: 8rem rgba(255, 255, 255, .05) solid;
 }
 
 #real-circle {
@@ -147,5 +148,21 @@ main::before {
 }
 
 section.space {
+    padding-top: 60px;
     height: 500px;
+}
+
+blockquote {
+    display: block;
+    padding: 32px;
+    background-color: rgba(0, 0, 0, .25);
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    backdrop-filter: blur(4px);
+}
+
+blockquote footer {
+    text-align: right;
+    margin-right: 32px;
 }
