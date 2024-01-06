@@ -69,26 +69,6 @@ nav li a:hover {
     transition-duration: 250ms;
 }
 
-#about {
-    font-size: .8rem;
-    height: 100vh;
-}
-
-#up-arrow i {
-    justify-self: center;
-    color: yellow;
-}
-
-#up-arrow p {
-    text-align: center;
-}
-
-footer ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 table, th, td {
     border-collapse: collapse;
 }
@@ -165,4 +145,23 @@ blockquote {
 blockquote footer {
     text-align: right;
     margin-right: 32px;
+}
+
+#about {
+    font-size: .8rem;
+}
+
+#up-arrow i {
+    justify-self: center;
+    color: yellow;
+}
+
+#up-arrow p {
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
