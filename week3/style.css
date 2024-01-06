@@ -1,7 +1,7 @@
 * {
     font-family: 'Courier New', Courier, monospace;
-    /* outline: 1px solid red;
-    outline-offset: -1px; */
+    outline: 1px solid red;
+    outline-offset: -1px;
     color: white;
     scroll-behavior: smooth;
 }
@@ -9,6 +9,7 @@
 body {
     background-color: rgba(25, 25, 25, 1);
     overflow-x: hidden;
+    margin: 0;
 }
 
 header {
@@ -51,6 +52,11 @@ nav {
     display: flex;
     justify-content: center;
     backdrop-filter: blur(2px);
+    z-index: 1; /* <1 puts it behind blockquote */
+}
+
+nav ul {
+    padding: 0px;
 }
 
 nav li {
@@ -69,17 +75,18 @@ nav li a:hover {
     transition-duration: 250ms;
 }
 
+section {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
 table, th, td {
     border-collapse: collapse;
 }
 
 table {
-    margin-top: 100px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 1.2rem;
-    
+    width: 100%;
 }
 
 th, td {
@@ -127,14 +134,11 @@ main::before {
     outline: 4rem rgba(255, 255, 255, .05) dotted;
 }
 
-section.space {
-    padding-top: 60px;
-    height: 500px;
-}
 
 blockquote {
     display: block;
-    padding: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     background-color: rgba(0, 0, 0, .25);
     font-size: 1.2rem;
     text-align: center;
@@ -144,7 +148,6 @@ blockquote {
 
 blockquote footer {
     text-align: right;
-    margin-right: 32px;
 }
 
 #about {
@@ -164,4 +167,17 @@ footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+/* Classes */
+
+section.space {
+    padding-top: 60px;
+    height: 500px;
+}
+
+.col {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
