@@ -1,14 +1,14 @@
 * {
     font-family: 'Courier New', Courier, monospace;
-    /* outline: 1px solid red;
-    outline-offset: -1px; */
+    outline: 1px solid red;
+    outline-offset: -1px;
     color: white;
     scroll-behavior: smooth;
 }
 
 body {
     background-color: rgba(25, 25, 25, 1);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     margin: 0;
 }
 
@@ -36,7 +36,6 @@ header img {
     padding: 40px;
     width: 33vw;
 }
-
 
 header #header-right {
     vertical-align: center;
@@ -85,7 +84,7 @@ table, th, td {
 }
 
 table {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     width: 100%;
 }
 
@@ -108,7 +107,7 @@ th:hover, td:hover {
     transition-timing-function: ease-in-out;
 }
 
-main::before {
+#section-1::before {
     /* Fake Circle */
     content: "";
     position: absolute;
@@ -123,16 +122,18 @@ main::before {
     outline: 8rem rgba(255, 255, 255, .05) solid;
 }
 
-#real-circle {
-    position: absolute;
+/* #circle-2::before {
+    content: "";
+    transform: rotate(var(--rotation));
+    position: relative;
     z-index: -1;
-    width: 65vw;
-    aspect-ratio: 1;
-    right: -15vw;
+    width: 500px;
+    height: 1000px;
+    left: 50vw;
     border-radius: 50%;
-    /* background-color: rgba(255, 255, 255, .05); */
-    outline: 4rem rgba(255, 255, 255, .05) dotted;
-}
+    border: 4rem rgba(255, 255, 255, .05) dotted;
+}  */
+
 
 blockquote {
     display: block;
@@ -147,10 +148,6 @@ blockquote {
 
 blockquote footer {
     text-align: right;
-}
-
-#about {
-    text-align: center;
 }
 
 #up-arrow i {
@@ -169,22 +166,68 @@ blockquote footer {
     transition-duration: 250ms;
 }
 
+footer#contact {
+    padding: 32px;
+    background-color: black;
+    color: red;
+    display: flex;
+    gap: 64px;;
+}
+
+footer#contact div {
+    min-width: 50vw;
+    max-width: 30%;
+    text-align: left;
+}
 
 footer ul {
+    float: right;
     list-style-type: none;
-    margin: 0;
+    margin: 1rem 0 0 0 ;
     padding: 0;
 }
+
 
 /* Classes */
 
 section.space {
-    padding-top: 60px;
-    height: 500px;
+    height: 1000px;
 }
 
 .col {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Media */
+
+@media only screen and (max-width: 1000px) {
+    header {
+        flex-direction: column;
+    }
+    header#header-left {
+        width: 100%;
+    }
+    footer#contact {
+        flex-direction: column;
+    }
+    footer#contact div {
+        min-width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    footer#contact ul li {
+        display: inline;
+        text-align: center;
+    }
+    footer#contact ul {
+        text-align: center;
+    }
+    th, td {
+        padding: 25px 0px 25px 0px;
+    }
+    #real-circle::after {
+        content: "";
+    }
 }
