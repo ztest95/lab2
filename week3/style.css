@@ -1,7 +1,7 @@
 * {
     font-family: 'Courier New', Courier, monospace;
-    outline: 1px solid red;
-    outline-offset: -1px;
+    /* outline: 1px solid red;
+    outline-offset: -1px; */
     color: white;
     scroll-behavior: smooth;
 }
@@ -134,7 +134,6 @@ main::before {
     outline: 4rem rgba(255, 255, 255, .05) dotted;
 }
 
-
 blockquote {
     display: block;
     padding-top: 32px;
@@ -151,17 +150,25 @@ blockquote footer {
 }
 
 #about {
-    font-size: .8rem;
+    text-align: center;
 }
 
 #up-arrow i {
     justify-self: center;
-    color: yellow;
+    color: white;
 }
 
 #up-arrow p {
     text-align: center;
+    font-size: 2rem;
 }
+
+#up-arrow p:hover {
+    color: #fff01f;
+    text-shadow: 0px 0px 25px  #fff01f;
+    transition-duration: 250ms;
+}
+
 
 footer ul {
     list-style-type: none;
