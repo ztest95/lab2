@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 function calculateScrollPercentage() {
-    let scrollTop =  document.documentElement.scrollTop;
-    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    return (scrollTop / scrollHeight) * 100;
+    let scrollTop =  document.documentElement.scrollTop; // distance from top of page to top of viewport
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight; // total height of page
+    return (scrollTop / scrollHeight) * 100; // how much of the page is scrolled
 }
 
 function rotateCircle(element, percentage) {
     let rotationDegrees = (percentage / 100) * 360;
-    element.style.setProperty('--rotation', rotationDegrees + 'deg');
+    element.style.setProperty('--rotation', rotationDegrees + 'deg'); // sets css variable '--rotation' to rotationDegrees
 }

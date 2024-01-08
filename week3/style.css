@@ -45,6 +45,8 @@ header #header-right p {
     color: white;
 }
 
+/* Nav Bar */
+
 nav {
     position: sticky;
     top: 0px;
@@ -74,6 +76,8 @@ nav li a:hover {
     transition-duration: 250ms;
 }
 
+/* Webpage Sections */
+
 section {
     margin-top: 64px;
     margin-bottom: 64px;
@@ -83,6 +87,8 @@ section img {
     display: block;
     margin: auto;
 }
+
+/* Table (Skills, Hobbies, Interests) */
 
 table, th, td {
     border-collapse: collapse;
@@ -111,34 +117,6 @@ th:hover, td:hover {
     transition-duration: 50ms;
     transition-timing-function: ease-in-out;
 }
-
-.full-width::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 65vw;
-    aspect-ratio: 1;
-    top: 25vh;
-    left: -20vw;
-    display: block;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, .05);
-    outline: 8rem rgba(255, 255, 255, .05) solid;
-}
-
-/* https://stackoverflow.com/questions/306062/css3-selector-to-find-the-2nd-div-of-the-same-class */
-/* specific selection is not needed, just trying different ways */
-.full-width~.full-width #circle-2 {
-    content: "";
-    transform: rotate(var(--rotation));
-    position: relative;
-    z-index: -1;
-    width: 65vw;
-    aspect-ratio: 1;
-    left: 45vw;
-    border-radius: 50%;
-    border: 4rem rgba(255, 255, 255, .05) dotted;
-} 
 
 
 blockquote {
@@ -218,15 +196,50 @@ section.space {
     overflow: hidden;
 }
 
-/* Media */
+/* Design */ 
+
+.full-width:first-of-type:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 65vw;
+    aspect-ratio: 1;
+    top: 25vh;
+    left: -20vw;
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .05);
+    outline: 8rem rgba(255, 255, 255, .05) solid;
+}
+
+/* https://stackoverflow.com/questions/306062/css3-selector-to-find-the-2nd-div-of-the-same-class */
+/* specific selection is not needed, just trying different ways */
+.full-width~.full-width #circle-2 {
+    content: "";
+    transform: rotate(var(--rotation));
+    position: relative;
+    z-index: -1;
+    width: 65vw;
+    aspect-ratio: 1;
+    left: 45vw;
+    border-radius: 50%;
+    border: 4rem rgba(255, 255, 255, .05) dotted;
+} 
+
+/* Media, Mobile & Tablet */
 
 @media only screen and (max-width: 1000px) {
+
+    /* Header Responsiveness */
     header {
         flex-direction: column;
     }
     header#header-left {
         width: 100%;
     }
+
+    /* Footer Responsiveness */
+
     footer#contact {
         flex-direction: column;
     }
@@ -244,8 +257,5 @@ section.space {
     }
     th, td {
         padding: 25px 0px 25px 0px;
-    }
-    #real-circle::after {
-        content: "";
     }
 }
