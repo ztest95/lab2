@@ -128,6 +128,7 @@ blockquote {
     text-align: center;
     margin: 0;
     backdrop-filter: blur(4px);
+    z-index: -2;
 }
 
 blockquote footer {
@@ -171,8 +172,34 @@ footer ul {
     padding: 0;
 }
 
+section#projects-tools div ul li {
+    margin: .5rem 0 .5rem 0;
+}
+section#projects-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+section#projects-tools div {
+    height: 100%;
+    width: 30%
+}
+
+section#section-games ul {
+    padding: 0;
+}
+section#section-games ul li {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
 
 /* Classes */
+
+h1 {
+    color: #fff01f;
+}
 
 section.space {
     height: 500px;
@@ -196,6 +223,10 @@ section.space {
     overflow: hidden;
 }
 
+.align-middle {
+    text-align: center;
+}
+
 /* Design */ 
 
 .full-width:first-of-type:before {
@@ -208,24 +239,41 @@ section.space {
     left: -20vw;
     display: block;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, .05);
-    outline: 8rem rgba(255, 255, 255, .05) solid;
+    background-color: rgba(255, 255, 255, .15);
+    outline: 8rem rgba(255, 255, 255, .15) solid;
 }
 
 /* https://stackoverflow.com/questions/306062/css3-selector-to-find-the-2nd-div-of-the-same-class */
 /* specific selection is not needed, just trying different ways */
+
+
 .full-width~.full-width #circle-2 {
     content: "";
     transform: rotate(var(--rotation));
     position: relative;
-    z-index: -1;
     width: 65vw;
     aspect-ratio: 1;
     left: 45vw;
     border-radius: 50%;
-    border: 4rem rgba(255, 255, 255, .05) dotted;
+    border: 4rem rgba(255, 255, 255, .15) dotted;
 } 
 
+.full-width~.full-width {
+    position:fixed;
+    top: 25vh;
+    z-index: -1;
+}
+
+#amogusyellow {
+    z-index: 999;
+}
+
+#amogusyellow:hover {
+    transform: scale(1.1);
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
 /* Media, Mobile & Tablet */
 
 @media only screen and (max-width: 1000px) {

@@ -5,6 +5,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let scrollPercentage = calculateScrollPercentage();
         rotateCircle(circle2, scrollPercentage);
     };
+
+    console.log("Hello visitor")
+
+    let amogus = document.querySelector('#amogusyellow');
+    amogus.addEventListener('click', function(event) {
+        alert('sus');
+    });
 });
 
 function calculateScrollPercentage() {
