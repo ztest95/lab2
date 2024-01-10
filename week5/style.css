@@ -1,0 +1,315 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    /* outline: 1px solid red;
+    outline-offset: -1px; */
+    color: white;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgba(25, 25, 25, 1);
+    /* overflow-x: hidden; */
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+header span {
+    color: #fff01f;
+    font-size: 2rem;
+}
+
+header span:hover {
+    text-shadow: 0px 0px 25px white;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+header img {
+    padding: 40px;
+    width: 33vw;
+}
+
+header #header-right {
+    vertical-align: center;
+}
+
+header #header-right p {
+    color: white;
+}
+
+/* Nav Bar */
+
+nav {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    z-index: 1; /* <1 puts it behind blockquote */
+}
+
+nav ul {
+    padding: 0px;
+}
+
+nav li {
+    text-align: center;
+    width: 5rem;
+    display: inline-block; 
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: #fff01f;
+    text-shadow: 0px 0px 15px  #fff01f;
+    transition-duration: 250ms;
+}
+
+/* Webpage Sections */
+
+section {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+section img {
+    display: block;
+    margin: auto;
+}
+
+/* Table (Skills, Hobbies, Interests) */
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+table {
+    /* font-size: 1.2rem; */
+    width: 100%;
+}
+
+th, td {
+    padding: 25px;
+}
+
+th {
+    color:#fff01f;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+td {
+    text-align: center;
+}   
+
+th:hover, td:hover {
+    background-color: rgba(255, 255, 255, .1);
+    transition-duration: 50ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+blockquote {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: rgba(0, 0, 0, .25);
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    backdrop-filter: blur(4px);
+    z-index: -2;
+}
+
+blockquote footer {
+    text-align: right;
+}
+
+#up-arrow i {
+    justify-self: center;
+    color: white;
+}
+
+#up-arrow p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#up-arrow p:hover {
+    color: #fff01f;
+    text-shadow: 0px 0px 25px  #fff01f;
+    transition-duration: 250ms;
+}
+
+footer#contact {
+    padding: 32px;
+    background-color: black;
+    color: red;
+    display: flex;
+    gap: 64px;;
+}
+
+footer#contact div {
+    min-width: 50vw;
+    max-width: 30%;
+    text-align: left;
+}
+
+footer ul {
+    float: right;
+    list-style-type: none;
+    margin: 1rem 0 0 0 ;
+    padding: 0;
+}
+
+section#projects-tools div ul li {
+    margin: .5rem 0 .5rem 0;
+}
+section#projects-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+section#projects-tools div {
+    height: 100%;
+    width: 30%
+}
+
+section#section-games ul {
+    padding: 0;
+}
+section#section-games ul li {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+/* Classes */
+
+h1 {
+    color: #fff01f;
+}
+
+section.space {
+    height: 500px;
+}
+
+.col {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.full-width {
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
+    opacity: .5;
+    overflow: hidden;
+}
+
+.align-middle {
+    text-align: center;
+}
+
+/* Design */ 
+
+.full-width:first-of-type:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 65vw;
+    aspect-ratio: 1;
+    top: 25vh;
+    left: -20vw;
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .15);
+    outline: 8rem rgba(255, 255, 255, .15) solid;
+}
+
+/* https://stackoverflow.com/questions/306062/css3-selector-to-find-the-2nd-div-of-the-same-class */
+/* specific selection is not needed, just trying different ways */
+
+
+.full-width~.full-width #circle-2 {
+    content: "";
+    transform: rotate(var(--rotation));
+    position: relative;
+    width: 65vw;
+    aspect-ratio: 1;
+    left: 45vw;
+    border-radius: 50%;
+    border: 4rem rgba(255, 255, 255, .15) dotted;
+} 
+
+.full-width~.full-width {
+    position:fixed;
+    top: 25vh;
+    z-index: -1;
+}
+
+#amogusyellow {
+    z-index: 999;
+}
+
+#amogusyellow:hover {
+    transform: scale(1.1);
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+a.disabled {
+    pointer-events: none;
+    text-decoration: none;
+    opacity: .5;
+}
+/* Media, Mobile & Tablet */
+
+@media only screen and (max-width: 1000px) {
+
+    /* Header Responsiveness */
+    header {
+        flex-direction: column;
+    }
+    header#header-left {
+        width: 100%;
+    }
+
+    /* Footer Responsiveness */
+
+    footer#contact {
+        flex-direction: column;
+    }
+    footer#contact div {
+        min-width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    footer#contact ul li {
+        display: inline;
+        text-align: center;
+    }
+    footer#contact ul {
+        text-align: center;
+    }
+    th, td {
+        padding: 25px 0px 25px 0px;
+    }
+}
