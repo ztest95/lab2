@@ -50,6 +50,11 @@ function loadColorChanger(element) {
         }
         index = new_index
 
+        // Change Webpage Title
+        const title = document.querySelector('title');
+        title.innerHTML = keys[index] + ' Potato' // Javascript Strings
+
+
         
     });
 
