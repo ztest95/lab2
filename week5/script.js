@@ -54,8 +54,11 @@ function loadColorChanger(element) {
         const title = document.querySelector('title');
         title.innerHTML = keys[index] + ' Potato' // Javascript Strings
 
+        // Change Title Name
+        element.innerHTML = keys[index]
 
-        
+        // Change Website Color
+        document.documentElement.style.setProperty('--highlight', colorsDict[keys[index]]);
     });
 
 };
