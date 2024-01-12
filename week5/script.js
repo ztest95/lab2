@@ -37,6 +37,9 @@ function loadColorChanger(element) {
     }
     // Javascript Arrays
     const keys = Object.keys(colorsDict)
+    // Javascript Variables, Let, Const & Data Types
+    let index = 0
+
 
 
 };
