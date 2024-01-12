@@ -36,6 +36,7 @@ function loadColorChanger(element) {
         'Cyan': 'cyan'
     }
     // Javascript Arrays
+    const keys = Object.keys(colorsDict)
 
 
 };
