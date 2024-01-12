@@ -42,6 +42,13 @@ function loadColorChanger(element) {
 
     // Javascript Events
     element.addEventListener('click', function(event) {
+        // Javascript Operators, Assignment, Arithmetic & Math
+        new_index = Math.floor(Math.random() * keys.length);
+
+        if (new_index == index) {
+            new_index = (new_index + 1) % keys.length;
+        }
+        index = new_index
 
         
     });
