@@ -6,6 +6,14 @@
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+}
+
+button {
+    all: unset;
+}
+
 body {
     background-color: rgba(25, 25, 25, 1);
     /* overflow-x: hidden; */
@@ -50,10 +58,27 @@ header #header-right p {
 nav {
     position: sticky;
     top: 0px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     justify-content: center;
     backdrop-filter: blur(2px);
     z-index: 1; /* <1 puts it behind blockquote */
+}
+
+nav div {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+}
+
+nav button {
+    grid-column: 3;
+    justify-self: end;
+}
+
+nav button i {
+    color: white;
+    font-size: 2rem;
 }
 
 nav ul {
@@ -64,10 +89,6 @@ nav li {
     text-align: center;
     width: 5rem;
     display: inline-block; 
-}
-
-nav li a {
-    text-decoration: none;
 }
 
 nav li a:hover {
