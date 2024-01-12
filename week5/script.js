@@ -40,6 +40,10 @@ function loadColorChanger(element) {
     // Javascript Variables, Let, Const & Data Types
     let index = 0
 
+    // Javascript Events
+    element.addEventListener('click', function(event) {
 
+        
+    });
 
 };
