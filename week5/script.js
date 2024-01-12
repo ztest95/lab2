@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     amogus.addEventListener('click', function(event) {
         alert('sus');
     });
+
+    let colorChanger = document.querySelector('#color');
+    loadColorChanger(colorChanger);
 });
 
 function calculateScrollPercentage() {
@@ -24,3 +27,15 @@ function rotateCircle(element, percentage) {
     let rotationDegrees = (percentage / 100) * 360;
     element.style.setProperty('--rotation', rotationDegrees + 'deg'); // sets css variable '--rotation' to rotationDegrees
 }
+
+function loadColorChanger(element) {
+    
+    const colorsDict = {
+        'Yellow': '#fff01f',
+        'Green': '#39FF14',
+        'Cyan': 'cyan'
+    }
+    // Javascript Arrays
+
+
+};
