@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     console.log("Hello visitor")
 
-    let amogus = document.querySelector('#amogusyellow');
+    let amogus = document.querySelector('#img-amogus');
     amogus.addEventListener('click', function(event) {
         alert('sus');
     });
@@ -32,7 +32,7 @@ function loadColorChanger(element) {
     
     const colorsDict = {
         'Yellow': '#fff01f',
-        'Green': '#39FF14',
+        'Lime': '#39FF14',
         'Cyan': 'cyan'
     }
     // Javascript Arrays
@@ -59,6 +59,10 @@ function loadColorChanger(element) {
 
         // Change Website Color
         document.documentElement.style.setProperty('--highlight', colorsDict[keys[index]]);
+
+        //
+        const amogus = document.querySelector('#img-amogus');
+        amogus.src = './media/sus-' + keys[index] + '.webp';
     });
 
 };

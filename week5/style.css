@@ -292,11 +292,11 @@ section.space {
     z-index: -1;
 }
 
-#amogusyellow {
+#img-amogus {
     z-index: 999;
 }
 
-#amogusyellow:hover {
+#img-amogus:hover {
     transform: scale(1.1);
     transition-duration: 250ms;
     transition-timing-function: ease-in-out;
