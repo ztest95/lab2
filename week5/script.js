@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     let colorChanger = document.querySelector('#color');
     loadColorChanger(colorChanger);
+    loadColorChanger(amogus)
+    
 });
 
 function calculateScrollPercentage() {
