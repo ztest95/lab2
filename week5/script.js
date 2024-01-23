@@ -41,5 +41,12 @@ function rotateCircle(element, percentage) {
 // Javascript: Functions
 function loadBoxHover(parentElement) {
 
+    // Javascript: Objects
+    const boxLinks = {
+        1: 'https://en.wikipedia.org/wiki/Gaming',
+        2: 'https://en.wikipedia.org/wiki/Reading',
+        3: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    }
+    
 
 }
