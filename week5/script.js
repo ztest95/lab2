@@ -37,3 +37,9 @@ function rotateCircle(element, percentage) {
     let rotationDegrees = (percentage / 100) * 360;
     element.style.setProperty('--rotation', rotationDegrees + 'deg'); // sets css variable '--rotation' to rotationDegrees
 }
+
+// Javascript: Functions
+function loadBoxHover(parentElement) {
+
+
+}
