@@ -2,6 +2,7 @@
 import loadColorChanger from "./colorchanger.js";
 
 document.addEventListener("DOMContentLoaded", function(event) {
+
     let circle2= document.querySelector('#circle-2');
 
     window.onscroll = function() {
@@ -19,6 +20,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let colorChanger = document.querySelector('#color');
     loadColorChanger(colorChanger);
     loadColorChanger(amogus)
+
+    // Javascript: DOM
+    let boxSection = document.querySelector('#boxes');
+    loadBoxHover(boxSection);
 
 });
 
