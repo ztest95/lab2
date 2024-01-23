@@ -48,5 +48,33 @@ function loadBoxHover(parentElement) {
         3: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
     }
     
+    const boxes = parentElement.querySelectorAll('.box');
 
+    boxes.forEach((box, index) => {
+        const label = box.querySelector('h1');
+        const icon = box.querySelector('i');
+
+        box.addEventListener('mouseover', function(event) {
+            event.Propagation = false;
+            label.classList.add('hover');
+            document.body.style.cursor = 'pointer';
+            icon.classList.add('hover');
+            // display properties defined in css
+            
+        });
+
+        box.addEventListener('mouseout', function(event) {
+            event.Propagation = false;
+            label.classList.remove('hover');
+            document.body.style.cursor = 'default';
+            icon.classList.remove('hover');
+        });
+
+        box.addEventListener('click', function(event) {
+            // Javascript: Browser BOM
+            window.open(boxLinks[index + 1], '_blank');
+            
+        });
+
+    });
 }
