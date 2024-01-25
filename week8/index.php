@@ -190,6 +190,16 @@
         <!-- https://among-us.fandom.com/wiki/Yellow -->
     </section>
 
+    <section id="sus-section" style="display: flex">
+        <img class="sus" src="./media/sus-Yellow.webp" alt="Amogus Yellow" id="img-amogus-yellow">
+        <img class="sus" src="./media/sus-Cyan.webp" alt="Amogus Yellow" id="img-amogus-cyan">
+        <img class="sus" src="./media/sus-Lime.webp" alt="Amogus Yellow" id="img-amogus-lime">
+    </section>
+    <div style='display: flex; justify-content: center;' >
+        <h1>Score: </h1><h1 id='score-counter' style="text-alignment: center;"></h1>
+    </div>
+    
+
     <div id="up-arrow">
         <p><a href="#home"><i class="bi bi-arrow-up-circle"></i></a></p>
         

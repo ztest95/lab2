@@ -1,5 +1,6 @@
 // Javascript modules
 import loadColorChanger from "./colorchanger.js";
+import loadsus from "./findthesus.js";
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
@@ -24,6 +25,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Javascript: DOM
     let boxSection = document.querySelector('#boxes');
     loadBoxHover(boxSection);
+
+    const susSection = document.querySelector('#sus-section');
+    const scoreCounter = document.querySelector('#score-counter');
+    loadsus(susSection, scoreCounter);
 
 });
 
