@@ -4,7 +4,7 @@ import loadsus from "./findthesus.js";
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    let circle2= document.querySelector('#circle-2');
+    const circle2= document.querySelector('#circle-2');
 
     window.onscroll = function() {
         let scrollPercentage = calculateScrollPercentage();
@@ -13,17 +13,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     console.log("Hello visitor")
 
-    let amogus = document.querySelector('#img-amogus');
+    const amogus = document.querySelector('#img-amogus');
     amogus.addEventListener('click', function(event) {
         alert('sus');
     });
 
-    let colorChanger = document.querySelector('#color');
+    const colorChanger = document.querySelector('#color');
     loadColorChanger(colorChanger);
     loadColorChanger(amogus)
 
     // Javascript: DOM
-    let boxSection = document.querySelector('#boxes');
+    const boxSection = document.querySelector('#boxes');
     loadBoxHover(boxSection);
 
     const susSection = document.querySelector('#sus-section');
