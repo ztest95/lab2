@@ -12,6 +12,12 @@ if ($score > 4) {
     $message = "You won!";
 }
 
+// Output the response as JSON
+header('Content-Type: application/json');
+// PHP: Echo / Print
+echo json_encode(
+
+);
 
 
 ?>
