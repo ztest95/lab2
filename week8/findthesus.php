@@ -16,7 +16,12 @@ if ($score > 4) {
 header('Content-Type: application/json');
 // PHP: Echo / Print
 echo json_encode(
-
+    // PHP: Arrays
+    [
+        'score' => $score,
+        'randomNumber' => $randomNumber,
+        'message' => $message
+    ]
 );
 
 
