@@ -305,22 +305,19 @@
                         $conn = new mysqli($servername, $username, $password, $dbname);
                         // Check connection
                         if ($conn->connect_error) {
-                            die("Connection failed: " . $conn->connect_error);
+                        die("Connection failed: " . $conn->connect_error);
                         }
 
-                        // Prepare an SQL statement
-                        $stmt = $conn->prepare("INSERT INTO mctapiru_myguest (name, email, website, comment, gender) VALUES ('$name', '$email', '$website', '$comment', '$gender')");
-                        // Bind variables to the prepared statement
-                        $stmt->bind_param("sssss", $name, $email, $website, $comment, $gender);
+                        $sql = "INSERT INTO mctapiru_myguests (name, email, website, command, gender)
+                        VALUES ('$name', '$email', '$website', '$comment', '$gender')";
 
-                        // Execute the prepared statement
-                        if ($stmt->execute() === TRUE) {
-                            echo "New record created successfully";
+                        if ($conn->query($sql) === TRUE) {
+                        echo "New record created successfully";
                         } else {
-                            echo "Error: " . $stmt->error;
+                        echo "Error: " . $sql . "<br>" . $conn->error;
                         }
 
-                        $conn->close();
+                    $conn->close();
                     }
                 ?>
         </div>
