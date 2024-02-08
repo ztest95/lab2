@@ -334,6 +334,10 @@ section.space {
     justify-content: center;
 }
 
+#form input, textarea {
+    background-color: var(--background);
+}
+
 
 .full-width~.full-width #circle-2 {
     content: "";
