@@ -295,7 +295,7 @@
                 ?>
 
                 <?php
-                    if ($nameErr == "" && $emailErr == "" && $websiteErr == "" && $genderErr == "") {
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $servername = "localhost";
                         $username = "webprogss221";
                         $password = "=latHen97";
@@ -309,7 +309,7 @@
                         }
 
                         // Prepare an SQL statement
-                        $stmt = $conn->prepare("INSERT INTO mctapiru_myguests (name, email, website, comment, gender) VALUES ('$name', '$email', '$website', '$comment', '$gender')");
+                        $stmt = $conn->prepare("INSERT INTO mctapiru_myguest (name, email, website, comment, gender) VALUES ('$name', '$email', '$website', '$comment', '$gender')");
                         // Bind variables to the prepared statement
                         $stmt->bind_param("sssss", $name, $email, $website, $comment, $gender);
 
