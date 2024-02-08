@@ -283,7 +283,6 @@
         return $data;
         }
 
-        $conn->close();
         ?>
     
 
