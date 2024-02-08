@@ -282,17 +282,47 @@
                 </form>
 
                 <?php
-            echo "<h2>Your Input:</h2>";
-            echo $name;
-            echo "<br>";
-            echo $email;
-            echo "<br>";
-            echo $website;
-            echo "<br>";
-            echo $comment;
-            echo "<br>";
-            echo $gender;
-            ?>
+                    echo "<h2>Your Input:</h2>";
+                    echo $name;
+                    echo "<br>";
+                    echo $email;
+                    echo "<br>";
+                    echo $website;
+                    echo "<br>";
+                    echo $comment;
+                    echo "<br>";
+                    echo $gender;
+                ?>
+
+                <?php
+                    if ($nameErr == "" && $emailErr == "" && $websiteErr == "" && $genderErr == "") {
+                        $servername = "localhost";
+                        $username = "webprogss221";
+                        $password = "=latHen97";
+                        $dbname = "webprogss221";
+
+                        // Create connection
+                        $conn = new mysqli($servername, $username, $password, $dbname);
+                        // Check connection
+                        if ($conn->connect_error) {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
+
+                        // Prepare an SQL statement
+                        $stmt = $conn->prepare("INSERT INTO mctapiru_myguests (name, email, website, comment, gender) VALUES ('$name', '$email', '$website', '$comment', '$gender')");
+                        // Bind variables to the prepared statement
+                        $stmt->bind_param("sssss", $name, $email, $website, $comment, $gender);
+
+                        // Execute the prepared statement
+                        if ($stmt->execute() === TRUE) {
+                            echo "New record created successfully";
+                        } else {
+                            echo "Error: " . $stmt->error;
+                        }
+
+                        $conn->close();
+                    }
+                ?>
         </div>
 
 
