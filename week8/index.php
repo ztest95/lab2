@@ -199,7 +199,7 @@
         <h1>Score: </h1><h1 id='score-counter' style="text-alignment: center;"></h1>
     </div>
     
-    <section class="col">
+    <section class="col" id="form">
 
         <?php
         $servername = "localhost";
