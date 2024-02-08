@@ -329,7 +329,14 @@ section.space {
 /* https://stackoverflow.com/questions/306062/css3-selector-to-find-the-2nd-div-of-the-same-class */
 /* specific selection is not needed, just trying different ways */
 
+#form {
+    display: flex;
+    justify-content: center;
+}
 
+#form input, textarea{
+    background-color: var(--background);
+}
 .full-width~.full-width #circle-2 {
     content: "";
     transform: rotate(var(--rotation));

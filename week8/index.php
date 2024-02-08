@@ -310,7 +310,7 @@
         <input type="submit" name="submit" value="Submit">  
         </form>
 
-        <?php
+            <?php
         echo "<h2>Your Input:</h2>";
         echo $name;
         echo "<br>";
